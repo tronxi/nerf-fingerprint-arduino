@@ -1,0 +1,23 @@
+<div class="board">
+  <div class="content" *ngIf="!logged">
+    <button class="btn btn-primary" (click)="onRegister()">Registro</button>
+    <button class="btn btn-primary" (click)="onLogin()">Login</button>
+
+    <div *ngIf="showRegister">
+      Registrando
+    </div>
+    <div *ngIf="showLogin">
+      Logging
+    </div>
+    <div class="scroll">
+      <div *ngFor="let message of messageList.reverse()">
+      {{message}}
+      </div>
+    </div>
+  </div>
+
+  <div class="content" *ngIf="logged">
+    <button class="btn btn-primary" (click)="onLogout()">Logout</button>
+    <button class="btn btn-primary" (click)="onShoot()">Disparar</button>
+  </div>
+</div>

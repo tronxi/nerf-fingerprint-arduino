@@ -1,0 +1,4 @@
+serial:
+  port:
+    nerf: ${nerf}
+    fingerprint: ${fingerprint}

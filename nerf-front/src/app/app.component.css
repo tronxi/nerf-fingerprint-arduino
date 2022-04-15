@@ -1,0 +1,22 @@
+.scroll{
+  border:1px solid;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  width: 100%;
+  height: 750px;
+}
+
+.board {
+  margin: 30px;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin: 10px;
+}

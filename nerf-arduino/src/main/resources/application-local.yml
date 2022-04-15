@@ -1,0 +1,13 @@
+serial:
+  port:
+    nerf: /dev/cu.usbserial-14320
+    fingerprint: /dev/cu.usbmodem143401
+
+spring:
+  rabbitmq:
+    host: localhost
+    stomp:
+      port: 61613
+    username: guest
+    password: guest
+
