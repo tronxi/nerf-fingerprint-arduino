@@ -16,24 +16,6 @@ public class NerfSerialPortAdapter {
         this.nerfSerialPort = nerfSerialPort;
     }
 
-    public void startRotor() {
-        try {
-            nerfSerialPort.getOutputStream().write("a".getBytes());
-            nerfSerialPort.getOutputStream().flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void endRotor() {
-        try {
-            nerfSerialPort.getOutputStream().write("q".getBytes());
-            nerfSerialPort.getOutputStream().flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void shoot() {
         try {
             nerfSerialPort.getOutputStream().write("s".getBytes());

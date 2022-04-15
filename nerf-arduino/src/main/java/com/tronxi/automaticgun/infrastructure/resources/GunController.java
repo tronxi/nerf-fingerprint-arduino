@@ -26,16 +26,4 @@ public class GunController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/start")
-    public ResponseEntity<Void> start() {
-        nerfSerialPortAdapter.startRotor();
-        return ResponseEntity.ok().build();
-    }
-
-    @GetMapping("/stop")
-    public ResponseEntity<Void> stop() {
-        nerfSerialPortAdapter.endRotor();
-        return ResponseEntity.ok().build();
-    }
-
 }
