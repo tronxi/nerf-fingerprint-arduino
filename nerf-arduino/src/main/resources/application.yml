@@ -1,0 +1,13 @@
+serial:
+  port:
+    nerf: /dev/ttyUSB0
+    fingerprint: /dev/ttyACM0
+
+spring:
+  rabbitmq:
+    host: localhost
+    stomp:
+      port: 61613
+    username: guest
+    password: guest
+

@@ -38,7 +38,9 @@ export class AppComponent implements OnInit{
           if(event.body.startsWith("Stored!")) {
             this.client.deactivate();
             this.messageList = [];
-            this.messageList.push("Registraddo correctamente");
+            this.messageList.push("Registrado correctamente");
+            this.showRegister = false;
+            this.showLogin = false;
           }
         });
       };

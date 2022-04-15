@@ -1,7 +1,7 @@
 <div class="board">
   <div class="content" *ngIf="!logged">
-    <button class="btn btn-primary" (click)="onRegister()">Registro</button>
-    <button class="btn btn-primary" (click)="onLogin()">Login</button>
+    <button *ngIf="!showLogin" class="btn btn-primary" (click)="onRegister()">Registro</button>
+    <button *ngIf="!showRegister" class="btn btn-primary" (click)="onLogin()">Login</button>
 
     <div *ngIf="showRegister">
       Registrando
