@@ -19,6 +19,8 @@ public class FingerprintSerialPort {
 
     public void enroll()  {
         try {
+            fingerPrintSerialPort.openPort();
+            //while(!fingerPrintSerialPort.isOpen()){}
             fingerPrintSerialPort.getOutputStream().write("e".getBytes());
             fingerPrintSerialPort.getOutputStream().flush();
             String nextPosition = getNextPosition();
@@ -27,16 +29,22 @@ public class FingerprintSerialPort {
             fingerPrintSerialPort.getOutputStream().flush();
             Integer updatedNextPosition = Integer.parseInt(nextPosition) + 1;
             setNextPosition(updatedNextPosition);
+            //fingerPrintSerialPort.closePort();
         } catch (IOException e) {
+            //fingerPrintSerialPort.closePort();
             throw new RuntimeException();
         }
     }
 
     public void check() {
         try {
+            fingerPrintSerialPort.openPort();
+            //while(!fingerPrintSerialPort.isOpen()){}
             fingerPrintSerialPort.getOutputStream().write("c".getBytes());
             fingerPrintSerialPort.getOutputStream().flush();
+            //fingerPrintSerialPort.closePort();
         } catch (IOException e) {
+            //fingerPrintSerialPort.closePort();
             e.printStackTrace();
         }
     }

@@ -42,6 +42,13 @@ export class AppComponent implements OnInit{
             this.showRegister = false;
             this.showLogin = false;
           }
+          else if(event.body.startsWith("Huella sin coincidencia")) {
+            this.client.deactivate();
+            this.messageList = [];
+            this.messageList.push("Registro incorrecto");
+            this.showRegister = false;
+            this.showLogin = false;
+          }
         });
       };
       this.client.activate();

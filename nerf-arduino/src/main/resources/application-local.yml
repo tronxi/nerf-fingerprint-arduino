@@ -1,7 +1,7 @@
 serial:
   port:
-    nerf: /dev/cu.usbserial-14320
-    fingerprint: /dev/cu.usbmodem143401
+    nerf: /dev/ttyUSB0
+    fingerprint: /dev/ttyACM0
 
 spring:
   rabbitmq:

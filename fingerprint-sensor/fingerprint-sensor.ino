@@ -21,6 +21,7 @@ void setup() {
 
 void loop() {
   char selected = Serial.read();
+  Serial.println(selected);
   if(selected == 'e') {
       enroll();
   }else if (selected == 'c') {

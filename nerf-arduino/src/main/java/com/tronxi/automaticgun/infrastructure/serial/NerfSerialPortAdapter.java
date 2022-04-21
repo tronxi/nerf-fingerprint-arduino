@@ -18,9 +18,13 @@ public class NerfSerialPortAdapter {
 
     public void shoot() {
         try {
+            nerfSerialPort.openPort();
+            while(!nerfSerialPort.isOpen()){}
             nerfSerialPort.getOutputStream().write("s".getBytes());
             nerfSerialPort.getOutputStream().flush();
+            //nerfSerialPort.closePort();
         } catch (IOException e) {
+            //nerfSerialPort.closePort();
             e.printStackTrace();
         }
     }
